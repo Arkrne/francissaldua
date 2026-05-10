@@ -35,11 +35,6 @@ export function ContactSection() {
   const [honeypot, setHoneypot] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
 
-  // Generate a new challenge on mount
-  useEffect(() => {
-    generateChallenge();
-  }, []);
-
   const generateChallenge = () => {
     setChallenge({
       a: Math.floor(Math.random() * 9) + 1,
@@ -48,6 +43,11 @@ export function ContactSection() {
     setUserAnswer("");
     setIsVerified(false);
   };
+
+  // Generate a new challenge on mount
+  useEffect(() => {
+    generateChallenge();
+  }, []);
 
   const handleCaptchaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;

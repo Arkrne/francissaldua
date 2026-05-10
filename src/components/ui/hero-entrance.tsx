@@ -26,6 +26,22 @@ export default function HeroEntrance({ children }: HeroEntranceProps) {
   const [syncProgress, setSyncProgress] = useState(0);
   const reducedMotion = useReducedMotion();
 
+  // Memoize random values to keep render pure
+  const rainColumns = useMemo(() => Array.from({ length: 24 }).map(() => ({
+    duration: 1.5 + Math.random() * 2,
+    delay: Math.random() * 2,
+    binary: Array.from({ length: 40 }).map(() => Math.round(Math.random())).join("\n")
+  })), []);
+
+  const shardData = useMemo(() => SHARDS.map(() => ({
+    x: Math.random() * 1200 - 600,
+    y: Math.random() * 1000 - 500,
+    rotate: Math.random() * 360,
+    targetX: (Math.random() * 1200 - 600) * 1.5,
+    targetY: (Math.random() * 1000 - 500) * 1.5,
+    targetRotate: Math.random() * 720
+  })), []);
+
   useEffect(() => {
     setMounted(true);
     
@@ -117,40 +133,40 @@ export default function HeroEntrance({ children }: HeroEntranceProps) {
           >
             {/* Binary Rain Layer */}
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none flex justify-around">
-              {Array.from({ length: 24 }).map((_, i) => (
+              {rainColumns.map((col, i) => (
                 <motion.div
                   key={i}
                   initial={{ y: "-100%" }}
                   animate={{ y: "100%" }}
                   transition={{
-                    duration: 1.5 + Math.random() * 2,
+                    duration: col.duration,
                     repeat: Infinity,
                     ease: "linear",
-                    delay: Math.random() * 2
+                    delay: col.delay
                   }}
                   className="text-[#39ff14] font-mono text-[8px] leading-none whitespace-pre"
                 >
-                  {Array.from({ length: 40 }).map(() => Math.round(Math.random())).join("\n")}
+                  {col.binary}
                 </motion.div>
               ))}
             </div>
 
             {/* Floating Data Shards */}
-            {SHARDS.map((_, i) => (
+            {shardData.map((shard, i) => (
               <motion.div
                 key={`shard-${i}`}
                 className="absolute w-24 h-px bg-[#39ff14]/30 blur-[1px]"
                 initial={{ 
-                  x: Math.random() * 1200 - 600, 
-                  y: Math.random() * 1000 - 500, 
-                  rotate: Math.random() * 360,
+                  x: shard.x, 
+                  y: shard.y, 
+                  rotate: shard.rotate,
                   opacity: 0
                 }}
                 animate={{ 
                   opacity: [0, 0.5, 0],
-                  x: (Math.random() * 1200 - 600) * 1.5,
-                  y: (Math.random() * 1000 - 500) * 1.5,
-                  rotate: Math.random() * 720
+                  x: shard.targetX,
+                  y: shard.targetY,
+                  rotate: shard.targetRotate
                 }}
                 transition={{
                   duration: 2.5,
@@ -232,7 +248,7 @@ export default function HeroEntrance({ children }: HeroEntranceProps) {
                 className="absolute -bottom-24 left-0 w-full text-center px-4"
               >
                 <div className="text-[#00FFFF] font-mono text-sm md:text-base tracking-[0.8em] mb-4 font-bold text-center">
-                  // ACCESS_GRANTED_ROOT
+                  {"// ACCESS_GRANTED_ROOT"}
                 </div>
                 <div className="w-full h-2 bg-[#1d6b6b]/30 rounded-full overflow-hidden border border-[#1d6b6b]/50 text-center">
                   <motion.div 

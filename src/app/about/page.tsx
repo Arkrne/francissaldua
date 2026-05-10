@@ -33,7 +33,7 @@ export default function AboutPage() {
           <div className="mt-10 grid gap-8 border-t border-[#39ff14]/10 pt-8">
             <div>
               <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-[#00FFFF] mb-3 font-mono">
-                // What clients get
+                {"// What clients get"}
               </h3>
               <ul className="list-none space-y-3 text-[#f2f2f2]">
                 <li className="flex items-start gap-3">
@@ -52,7 +52,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-[#00FFFF] mb-3 font-mono">
-                // Maintenance model
+                {"// Maintenance model"}
               </h3>
               <p className="text-[#c9c9c9] leading-relaxed">
                 The per-change system keeps budgets flexible: every update

@@ -19,7 +19,6 @@ export function AnimatedCounter({ value, suffix = "", prefix = "", label, durati
   useEffect(() => {
     if (!isInView) return;
 
-    let start = 0;
     const startTime = performance.now();
     const endValue = value;
 

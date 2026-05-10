@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect } from 'react';
+import { useRef, useCallback } from 'react';
 import './BorderGlow.css';
 
 function parseHSL(hslStr: string) {
@@ -33,7 +33,33 @@ function buildGradientVars(colors: string[]) {
   return vars;
 }
 
-const BorderGlow = ({ children, className = '', edgeSensitivity = 30, glowColor = '40 80 80', backgroundColor = '#120F17', borderRadius = 28, glowRadius = 40, glowIntensity = 1.0, coneSpread = 25, fillOpacity = 0.5, colors = ['#c084fc', '#f472b6', '#38bdf8'] }: any) => {
+interface BorderGlowProps {
+  children: React.ReactNode;
+  className?: string;
+  edgeSensitivity?: number;
+  glowColor?: string;
+  backgroundColor?: string;
+  borderRadius?: number;
+  glowRadius?: number;
+  glowIntensity?: number;
+  coneSpread?: number;
+  fillOpacity?: number;
+  colors?: string[];
+}
+
+const BorderGlow = ({ 
+  children, 
+  className = '', 
+  edgeSensitivity = 30, 
+  glowColor = '40 80 80', 
+  backgroundColor = '#120F17', 
+  borderRadius = 28, 
+  glowRadius = 40, 
+  glowIntensity = 1.0, 
+  coneSpread = 25, 
+  fillOpacity = 0.5, 
+  colors = ['#c084fc', '#f472b6', '#38bdf8'] 
+}: BorderGlowProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   
   const getCenterOfElement = useCallback((el: HTMLElement) => {

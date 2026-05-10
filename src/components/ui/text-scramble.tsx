@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
 interface TextScrambleProps {
   text: string;
@@ -16,24 +16,7 @@ export function TextScramble({ text, className = "", delay = 0, speed = 30 }: Te
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
-    if (hasAnimated) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          scramble();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  });
-
-  const scramble = () => {
+  const scramble = useCallback(() => {
     let iteration = 0;
     const totalIterations = text.length * 2;
 
@@ -57,7 +40,29 @@ export function TextScramble({ text, className = "", delay = 0, speed = 30 }: Te
         }
       }, speed);
     }, delay);
-  };
+  }, [text, speed, delay]);
+
+  useEffect(() => {
+    if (hasAnimated) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasAnimated(true);
+          scramble();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) observer.observe(currentRef);
+    
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+      observer.disconnect();
+    };
+  }, [hasAnimated, scramble]);
 
   return (
     <span ref={ref} className={className}>

@@ -12,7 +12,10 @@ export default function SiteHeader() {
   useEffect(() => {
     const userAgent = window.navigator.userAgent.toLowerCase();
     const isApple = /iphone|ipad|ipod|safari/.test(userAgent) && !/chrome/.test(userAgent);
-    setIsAppleDevice(isApple);
+    
+    const rafId = requestAnimationFrame(() => {
+      setIsAppleDevice(isApple);
+    });
 
     let lastScrollY = window.scrollY;
     const threshold = 100;
@@ -31,6 +34,7 @@ export default function SiteHeader() {
 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
+      window.cancelAnimationFrame(rafId);
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
