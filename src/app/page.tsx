@@ -3,6 +3,7 @@ import ProjectsMasonry from "@/components/ui/projects-masonry";
 import Testimonials from "@/components/ui/testimonials-columns-1";
 import { LogoCloud } from "@/components/ui/logo-cloud-4";
 import { FAQ } from "@/components/ui/faq";
+import { ContactSection } from "@/components/ui/contact";
 import ExpandableGallery from "@/components/ui/gallery-animation";
 import StackOrbitBackground from "@/components/ui/stack-orbit-background";
 import { WaitlistHeroBackground } from "@/components/ui/waitlist-hero-background";
@@ -10,7 +11,6 @@ import AboutHyperspeed from "@/components/ui/about-hyperspeed";
 import HeroEntrance, { HeroText, HeroImage } from "@/components/ui/hero-entrance";
 import { TestimonialsSpinBackground } from "@/components/ui/testimonials-spin-background";
 import { RadialLaptopGallery } from "@/components/ui/radial-laptop-gallery";
-import { MagneticCursor } from "@/components/ui/magnetic-cursor";
 import { TextScramble } from "@/components/ui/text-scramble";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { ScrollVelocityText } from "@/components/ui/scroll-velocity-text";
@@ -82,7 +82,6 @@ const showcaseProjects = [
 export default function Home() {
   return (
       <HeroEntrance>
-      <MagneticCursor />
       <div id="home">
         {/* HERO SECTION */}
         <section className="w-full relative overflow-hidden" data-no-cascade>
@@ -96,7 +95,7 @@ export default function Home() {
           <StackOrbitBackground />
           <ParticleField className="z-[1]" particleCount={40} color="57, 255, 20" speed={0.2} connectionDistance={100} />
           <FloatingBadges />
-          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 pt-0 pb-12 md:px-8 md:pt-0 md:pb-16 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:pt-0 lg:pb-16 relative z-10">
+          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 pt-4 pb-12 md:px-8 md:pt-2 md:pb-16 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:pt-5 lg:pb-16 relative z-10">
             <div className="space-y-6 flex flex-col justify-center text-center lg:text-left items-center lg:items-start order-1">
               <HeroText delay={0}>
                 <div className="inline-block border border-[#1d6b6b]/50 py-1 px-3 md:py-1.5 md:px-4 rounded-full text-[10px] md:text-sm font-medium tracking-widest uppercase text-[#39ff14]/80 shadow-[0_0_10px_rgba(57,255,20,0.08)] w-max">
@@ -345,6 +344,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        <GlitchDivider />
+
+        {/* CONTACT SECTION */}
+        <section id="contact" className="reveal" data-reveal>
+          <ContactSection />
         </section>
       </div>
       </HeroEntrance>

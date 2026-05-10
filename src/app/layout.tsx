@@ -6,6 +6,7 @@ import SiteHeader from "@/components/site/header";
 import SiteFooter from "@/components/site/footer";
 import GlobalCyberBackground from "@/components/ui/GlobalCyberBackground";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { MagneticCursor } from "@/components/ui/magnetic-cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
           <main className="pt-16 md:pt-20 relative z-10">{children}</main>
           <SiteFooter />
         </PageShell>
+        <MagneticCursor />
       </body>
     </html>
   );
