@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "motion/react";
+import { motion, AnimatePresence, useReducedMotion, Variants } from "motion/react";
 
 interface HeroEntranceProps {
   children: React.ReactNode;
@@ -52,7 +52,7 @@ export default function HeroEntrance({ children }: HeroEntranceProps) {
     };
   }, []);
 
-  const brandVariants = {
+  const brandVariants: Variants = {
     initial: { opacity: 0, scale: 0.8, filter: "url(#cyber-glitch-2)" },
     animate: { 
       opacity: [0, 1, 0.7, 1, 0.8, 1],
@@ -81,7 +81,7 @@ export default function HeroEntrance({ children }: HeroEntranceProps) {
       opacity: 0,
       scale: 1.8,
       filter: "url(#cyber-glitch-2)",
-      transition: { duration: 0.6, ease: "circIn" }
+      transition: { duration: 0.6, ease: "easeIn" }
     }
   };
 
