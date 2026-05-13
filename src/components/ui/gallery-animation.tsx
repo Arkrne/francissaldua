@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from "react";
 import { motion } from "motion/react";
 import { Crosshair, GitBranch, Monitor, Server, Plug, ShieldCheck } from "lucide-react";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 interface ProjectItem {
   src: string;
@@ -64,7 +65,7 @@ const ExpandableGallery: React.FC<ExpandableGalleryProps> = ({
             >
               {/* Background image */}
               <img
-                src={project.src}
+                src={imagekitImageUrl(project.src, { width: 1600 })}
                 alt={project.alt}
                 className="w-full h-full object-cover transition-transform duration-500"
                 style={{ transform: isActive ? "scale(1.05)" : "scale(1)" }}
@@ -189,7 +190,7 @@ const ExpandableGallery: React.FC<ExpandableGalleryProps> = ({
               onClick={() => handleTap(index, project.link)}
             >
               <img
-                src={project.src}
+                src={imagekitImageUrl(project.src, { width: 1200 })}
                 alt={project.alt}
                 className="w-full h-full object-cover"
               />

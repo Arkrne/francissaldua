@@ -2,68 +2,69 @@
 
 import React, { useRef, useState, useCallback, useEffect } from "react";
 import { motion, useInView } from "motion/react";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 const projects = [
   {
     name: "MS2 Builder & Supply",
     description: "Construction inventory & logistics management system.",
-    image: "/MS2BuilderSupply.png",
+    image: imagekitImageUrl("/MS2BuilderSupply.png", { width: 1400 }),
     link: "https://m-s-2-builder-supplies.vercel.app/",
     tag: "Inventory System",
   },
   {
     name: "Cebu PRP Travel & Tours",
     description: "Premium booking platform for regional tours.",
-    image: "/CebuTravelTours.png",
+    image: imagekitImageUrl("/CebuTravelTours.png", { width: 1400 }),
     link: "https://cebu-prp-travel-tours.vercel.app/",
     tag: "Booking Platform",
   },
   {
     name: "Orvia Builders",
     description: "Portfolio showcase for luxury custom homes.",
-    image: "/OrviaBuilders.png",
+    image: imagekitImageUrl("/OrviaBuilders.png", { width: 1400 }),
     link: "https://orvia-builders.vercel.app/",
     tag: "Portfolio",
   },
   {
     name: "Musni Urian",
     description: "Secure data platform for operational audits.",
-    image: "/MusniUrian.png",
+    image: imagekitImageUrl("/MusniUrian.png", { width: 1400 }),
     link: "https://client-theta-mauve.vercel.app/",
     tag: "Data Platform",
   },
   {
     name: "POS System",
     description: "Real-time inventory for local retail businesses.",
-    image: "/POSSystem.png",
+    image: imagekitImageUrl("/POSSystem.png", { width: 1400 }),
     link: "https://abuab-inventory-gkp5.vercel.app/",
     tag: "POS & Retail",
   },
   {
     name: "Raffy's Reef",
     description: "Ecommerce hub for high-end reef keeping.",
-    image: "/RaffysReef.png",
+    image: imagekitImageUrl("/RaffysReef.png", { width: 1400 }),
     link: "https://raffy-s-reef.vercel.app/",
     tag: "Ecommerce",
   },
   {
     name: "K&A Sign Maker",
     description: "Production tracking for custom large-scale signage.",
-    image: "/KASignMaker.png",
+    image: imagekitImageUrl("/KASignMaker.png", { width: 1400, version: "3" }),
     link: "https://k-a-sign-maker.vercel.app/",
     tag: "Production Tracker",
   },
   {
     name: "Tandoc & Tandoc",
     description: "Professional legal services platform & client portal.",
-    image: "/TandocTandoc.png",
+    image: imagekitImageUrl("/TandocTandoc.png", { width: 1400 }),
     link: "https://tandoc-tandoc.vercel.app/",
     tag: "Legal Platform",
   },
   {
     name: "Vanilla 3000",
     description: "Modern analytics dashboard and workflow insights.",
-    image: "/Vanilla3000.png",
+    image: imagekitImageUrl("/Vanilla3000.png", { width: 1400 }),
     link: "https://vanilla3000-dashboard.vercel.app/",
     tag: "Analytics Dashboard",
   },

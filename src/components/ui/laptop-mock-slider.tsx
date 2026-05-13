@@ -3,17 +3,18 @@
 import React from "react";
 import Image from "next/image";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 const mockups = [
-  { src: "/laptop-CebuTravelTours.png", alt: "Cebu Travel & Tours Mockup" },
-  { src: "/laptop-KASignMaker.png", alt: "K&A Sign Maker Mockup" },
-  { src: "/laptop-MS2BuilderSupply.png", alt: "MS2 Builder Supply Mockup" },
-  { src: "/laptop-MusniUrian.png", alt: "Musni Urian Mockup" },
-  { src: "/laptop-OrviaBuilders.png", alt: "Orvia Builders Mockup" },
-  { src: "/laptop-POSSystem.png", alt: "POS System Mockup" },
-  { src: "/laptop-RaffysReef.png", alt: "Raffy's Reef Mockup" },
-  { src: "/laptop-TandocTandoc.png", alt: "Tandoc & Tandoc Mockup" },
-  { src: "/laptop-Vanilla3000.png", alt: "Vanilla 3000 Mockup" },
+  { src: imagekitImageUrl("/laptop-CebuTravelTours.png", { width: 1200 }), alt: "Cebu Travel & Tours Mockup" },
+  { src: imagekitImageUrl("/laptop-KASignMaker.png", { width: 1200 }), alt: "K&A Sign Maker Mockup" },
+  { src: imagekitImageUrl("/laptop-MS2BuilderSupply.png", { width: 1200 }), alt: "MS2 Builder Supply Mockup" },
+  { src: imagekitImageUrl("/laptop-MusniUrian.png", { width: 1200 }), alt: "Musni Urian Mockup" },
+  { src: imagekitImageUrl("/laptop-OrviaBuilders.png", { width: 1200 }), alt: "Orvia Builders Mockup" },
+  { src: imagekitImageUrl("/laptop-POSSystem.png", { width: 1200 }), alt: "POS System Mockup" },
+  { src: imagekitImageUrl("/laptop-RaffysReef.png", { width: 1200 }), alt: "Raffy's Reef Mockup" },
+  { src: imagekitImageUrl("/laptop-TandocTandoc.png", { width: 1200 }), alt: "Tandoc & Tandoc Mockup" },
+  { src: imagekitImageUrl("/laptop-Vanilla3000.png", { width: 1200 }), alt: "Vanilla 3000 Mockup" },
 ];
 
 export function LaptopMockSlider() {
@@ -29,6 +30,7 @@ export function LaptopMockSlider() {
                 fill
                 className="object-contain pointer-events-none select-none"
                 sizes="(max-width: 768px) 400px, 640px"
+                unoptimized
               />
             </div>
           ))}

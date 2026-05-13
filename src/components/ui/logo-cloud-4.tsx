@@ -1,4 +1,5 @@
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 type Logo = {
   src: string;
@@ -25,7 +26,7 @@ export function LogoCloud({ logos }: LogoCloudProps) {
               height="auto"
               key={`logo-${logo.alt}`}
               loading="lazy"
-              src={logo.src}
+              src={imagekitImageUrl(logo.src, { width: 240 })}
               width="auto"
             />
           ))}

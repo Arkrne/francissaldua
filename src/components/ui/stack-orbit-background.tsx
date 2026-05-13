@@ -20,6 +20,7 @@ import {
   SiTypescript,
   SiFacebook,
 } from "react-icons/si";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 const fallbackUrls = [
   "https://cdn.simpleicons.org/figma/F24E1E",
@@ -97,7 +98,11 @@ export default function StackOrbitBackground() {
                       {cfg.Icon ? (
                         <cfg.Icon className="h-6 w-6" style={{ color: cfg.color }} />
                       ) : (
-                        <img src={cfg.img} alt="icon" className="h-6 w-6 object-contain" />
+                        <img
+                          src={imagekitImageUrl(cfg.img ?? "", { width: 64 })}
+                          alt="icon"
+                          className="h-6 w-6 object-contain"
+                        />
                       )}
                     </div>
                   );

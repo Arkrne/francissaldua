@@ -1,4 +1,5 @@
 import AboutHyperspeed from "@/components/ui/about-hyperspeed";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 export default function AboutPage() {
   return (
@@ -9,7 +10,7 @@ export default function AboutPage() {
         <div className="relative group md:order-2 flex justify-center items-center">
           <div className="absolute inset-0 bg-gradient-to-bl from-[#1d6b6b]/10 to-transparent rounded-[2rem] transform group-hover:scale-105 transition-transform duration-700 blur-2xl -z-10"></div>
           <img
-            src="/Untitled design (1).png"
+            src={imagekitImageUrl("/Untitled_design__1_.png", { width: 1200 })}
             alt="Developer portrait"
             className="w-full max-w-lg object-contain drop-shadow-[0_0_15px_rgba(29,107,107,0.3)] hover:scale-105 transition-transform duration-700"
           />

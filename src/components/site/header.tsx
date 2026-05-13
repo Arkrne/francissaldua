@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 export default function SiteHeader() {
   const [hideHeader, setHideHeader] = useState(false);
@@ -61,7 +62,7 @@ export default function SiteHeader() {
             <Link href="/">
               {isAppleDevice ? (
                 <img
-                  src="/LogoNoBg.png"
+                  src={imagekitImageUrl("/LogoNoBg.png", { width: 600 })}
                   alt="Logo"
                   className="absolute left-0 top-1/2 h-[50px] md:h-[100px] w-auto -translate-y-1/2 object-contain"
                 />

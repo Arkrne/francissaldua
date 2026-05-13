@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 export function TestimonialsSpinBackground() {
   return (
@@ -45,7 +46,7 @@ export function TestimonialsSpinBackground() {
             }}
           >
             <img
-              src="https://framerusercontent.com/images/oqZEqzDEgSLygmUDuZAYNh2XQ9U.png?scale-down-to=2048"
+              src={imagekitImageUrl("https://framerusercontent.com/images/oqZEqzDEgSLygmUDuZAYNh2XQ9U.png?scale-down-to=2048")}
               alt=""
               className="w-full h-full object-cover opacity-30"
             />
@@ -63,7 +64,7 @@ export function TestimonialsSpinBackground() {
             }}
           >
             <img
-              src="https://framerusercontent.com/images/UbucGYsHDAUHfaGZNjwyCzViw8.png?scale-down-to=1024"
+              src={imagekitImageUrl("https://framerusercontent.com/images/UbucGYsHDAUHfaGZNjwyCzViw8.png?scale-down-to=1024")}
               alt=""
               className="w-full h-full object-cover opacity-40"
             />

@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { FooterBackgroundGradient } from "@/components/ui/hover-footer";
 import { TextHoverEffect } from "@/components/ui/hover-footer";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 function HoverFooter() {
   const footerLinks = [
@@ -72,12 +73,13 @@ function HoverFooter() {
           <div className="flex flex-col space-y-4 items-center md:items-start text-center md:text-left">
             <div className="relative h-24 md:h-32 w-48 md:w-56 shrink-0 overflow-visible">
               <Image
-                src="/AnoBG.png"
+                src={imagekitImageUrl("/AnoBG.png", { width: 600 })}
                 alt="Arkrne logo"
                 className="absolute left-0 top-0 h-full w-full object-contain"
                 style={{ transform: "translate(var(--logo-x, 0px), var(--logo-y, -15px))" }}
                 width={224}
                 height={128}
+                unoptimized
               />
             </div>
             <p className="text-base md:text-lg leading-relaxed text-[#c9c9c9] -mt-8 md:-mt-15">

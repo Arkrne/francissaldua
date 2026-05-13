@@ -387,7 +387,17 @@ const Hyperspeed = ({ effectOptions = DEFAULT_EFFECT_OPTIONS }) => {
           fogNear: { value: fog.near },
           fogFar: { value: fog.far }
         };
-        this.clock = new THREE.Clock();
+        this.clock = {
+          last: performance.now(),
+          elapsedTime: 0,
+          getDelta() {
+            const now = performance.now();
+            const delta = (now - this.last) / 1000;
+            this.last = now;
+            this.elapsedTime += delta;
+            return delta;
+          }
+        };
         this.assets = {};
         this.disposed = false;
 

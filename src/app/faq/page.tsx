@@ -1,4 +1,5 @@
 import { FAQ } from "@/components/ui/faq";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 export default function FaqPage() {
   return (
@@ -20,7 +21,7 @@ export default function FaqPage() {
           <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#1d6b6b]/20 via-transparent to-[#5a7e7e]/20 blur-2xl" aria-hidden="true" />
           <div className="relative overflow-hidden rounded-[2.5rem] border border-[#5a7e7e]/40 bg-[#1f1f1f]/60 p-4 shadow-[0_25px_60px_rgba(0,0,0,0.35)]">
             <img
-              src="/faq-portrait.png"
+              src={imagekitImageUrl("/faq-portrait.png", { width: 1200 })}
               alt="Francis T. Saldua"
               className="h-full w-full rounded-[2rem] object-cover"
             />

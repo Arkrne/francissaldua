@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
+import { imagekitImageUrl } from "@/lib/imagekit"
 
 export const WaitlistHero = () => {
   const [email, setEmail] = useState("")
@@ -186,7 +187,7 @@ export const WaitlistHero = () => {
               }}
             >
               <img
-                src="https://framerusercontent.com/images/oqZEqzDEgSLygmUDuZAYNh2XQ9U.png?scale-down-to=2048"
+                src={imagekitImageUrl("https://framerusercontent.com/images/oqZEqzDEgSLygmUDuZAYNh2XQ9U.png?scale-down-to=2048")}
                 alt=""
                 className="w-full h-full object-cover opacity-50"
               />
@@ -204,7 +205,7 @@ export const WaitlistHero = () => {
               }}
             >
               <img
-                src="https://framerusercontent.com/images/UbucGYsHDAUHfaGZNjwyCzViw8.png?scale-down-to=1024"
+                src={imagekitImageUrl("https://framerusercontent.com/images/UbucGYsHDAUHfaGZNjwyCzViw8.png?scale-down-to=1024")}
                 alt=""
                 className="w-full h-full object-cover opacity-60"
               />
@@ -222,7 +223,7 @@ export const WaitlistHero = () => {
               }}
             >
               <img
-                src="https://framerusercontent.com/images/Ans5PAxtJfg3CwxlrPMSshx2Pqc.png"
+                src={imagekitImageUrl("https://framerusercontent.com/images/Ans5PAxtJfg3CwxlrPMSshx2Pqc.png")}
                 alt=""
                 className="w-full h-full object-cover opacity-80"
               />
@@ -242,7 +243,7 @@ export const WaitlistHero = () => {
         <div className="relative z-20 w-full h-full flex flex-col items-center justify-end pb-24 gap-6">
           <div className="w-16 h-16 rounded-2xl shadow-lg overflow-hidden mb-2 ring-1 ring-white/10">
             <img
-              src="https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?q=80&w=1696&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={imagekitImageUrl("https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?q=80&w=1696&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")}
               alt="App Icon"
               className="w-full h-full object-cover"
             />

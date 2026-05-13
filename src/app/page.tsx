@@ -19,59 +19,60 @@ import { GlitchDivider } from "@/components/ui/glitch-divider";
 import { FloatingBadges } from "@/components/ui/floating-badges";
 import { MorphingGradient } from "@/components/ui/morphing-gradient";
 import { StatsRow } from "@/components/ui/counter-animation";
+import { imagekitImageUrl } from "@/lib/imagekit";
 
 const techLogos = [
-  { src: "https://cdn.simpleicons.org/nextdotjs/white", alt: "Next.js" },
-  { src: "https://cdn.simpleicons.org/react/61DAFB", alt: "React" },
-  { src: "https://cdn.simpleicons.org/typescript/3178C6", alt: "TypeScript" },
-  { src: "https://cdn.simpleicons.org/tailwindcss/06B6D4", alt: "Tailwind CSS" },
-  { src: "https://cdn.simpleicons.org/figma/F24E1E", alt: "Figma" },
-  { src: "https://cdn.simpleicons.org/postgresql/4169E1", alt: "PostgreSQL" },
-  { src: "https://cdn.simpleicons.org/prisma/white", alt: "Prisma" },
-  { src: "https://www.logo.wine/a/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.svg", alt: "AWS" },
-  { src: "https://cdn.simpleicons.org/vercel/white", alt: "Vercel" },
-  { src: "https://cdn.simpleicons.org/stripe/008CDD", alt: "Stripe" },
-  { src: "https://cdn.simpleicons.org/github/white", alt: "GitHub" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/nextdotjs/white"), alt: "Next.js" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/react/61DAFB"), alt: "React" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/typescript/3178C6"), alt: "TypeScript" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/tailwindcss/06B6D4"), alt: "Tailwind CSS" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/figma/F24E1E"), alt: "Figma" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/postgresql/4169E1"), alt: "PostgreSQL" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/prisma/white"), alt: "Prisma" },
+  { src: imagekitImageUrl("https://www.logo.wine/a/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.svg"), alt: "AWS" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/vercel/white"), alt: "Vercel" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/stripe/008CDD"), alt: "Stripe" },
+  { src: imagekitImageUrl("https://cdn.simpleicons.org/github/white"), alt: "GitHub" },
 ];
 
 const showcaseProjects = [
   {
-    src: "https://images.unsplash.com/photo-1643750522920-4a40dd222291?w=1200&q=80&fit=crop",
+    src: imagekitImageUrl("https://images.unsplash.com/photo-1643750522920-4a40dd222291?w=1200&q=80&fit=crop"),
     alt: "Strategy & Research",
     name: "Strategy",
     description: "Research, positioning, and go-to-market planning.",
     link: "/services",
   },
   {
-    src: "https://images.unsplash.com/photo-1639322537138-5e513100b36e?w=1200&q=80&fit=crop",
+    src: imagekitImageUrl("https://images.unsplash.com/photo-1639322537138-5e513100b36e?w=1200&q=80&fit=crop"),
     alt: "Information Architecture",
     name: "Information Architecture",
     description: "Sitemaps, content models, and user flows.",
     link: "/services",
   },
   {
-    src: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&q=80&fit=crop",
+    src: imagekitImageUrl("https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&q=80&fit=crop"),
     alt: "Front-End Systems",
     name: "Front-End Systems",
     description: "Component libraries, build tooling, and UI performance.",
     link: "/services",
   },
   {
-    src: "https://images.unsplash.com/photo-1680992046626-418f7e910589?w=1200&q=80&fit=crop",
+    src: imagekitImageUrl("https://images.unsplash.com/photo-1680992046626-418f7e910589?w=1200&q=80&fit=crop"),
     alt: "Back-End Engineering",
     name: "Back-End Engineering",
     description: "APIs, data models, and operational reliability.",
     link: "/services",
   },
   {
-    src: "https://images.unsplash.com/photo-1683447551794-1c287cd42675?w=1200&q=80&fit=crop",
+    src: imagekitImageUrl("https://images.unsplash.com/photo-1683447551794-1c287cd42675?w=1200&q=80&fit=crop"),
     alt: "API & Integrations",
     name: "API & Integrations",
     description: "Third-party services, payment routing, and CRM syncing.",
     link: "/services",
   },
   {
-    src: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1200&q=80&fit=crop",
+    src: imagekitImageUrl("https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1200&q=80&fit=crop"),
     alt: "Deployment & Security",
     name: "Deployment & Security",
     description: "Cloud hosting, SSL encryption, and performance auditing.",
@@ -87,7 +88,7 @@ export default function Home() {
         <section className="w-full relative overflow-hidden" data-no-cascade>
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
             <img
-              src="/AnoBG.png"
+              src={imagekitImageUrl("/AnoBG.png", { width: 2200 })}
               alt="Arkrne brand seal"
               className="w-[800px] md:w-[4000px] lg:w-[6800px] opacity-10 max-w-none"
             />
@@ -155,7 +156,7 @@ export default function Home() {
             <HeroImage className="relative group flex justify-center items-center order-2">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#1d6b6b]/10 to-transparent rounded-[2rem] transform group-hover:scale-105 transition-transform duration-700 blur-2xl -z-10"></div>
               <img
-                src="/851e814e-c298-44db-b056-7797abf6e4bf.png"
+                src={imagekitImageUrl("/851e814e-c298-44db-b056-7797abf6e4bf.png", { width: 1200 })}
                 alt="Developer working on a laptop"
                 className="w-full max-w-[280px] md:max-w-md lg:max-w-lg object-contain drop-shadow-[0_0_15px_rgba(29,107,107,0.3)] hover:scale-105 transition-transform duration-700"
               />
@@ -243,7 +244,7 @@ export default function Home() {
             <div className="relative group md:order-2 flex justify-center items-center">
               <div className="absolute inset-0 bg-gradient-to-bl from-[#1d6b6b]/10 to-transparent rounded-[2rem] transform group-hover:scale-105 transition-transform duration-700 blur-2xl -z-10"></div>
               <img
-                src="/Untitled design (1).png"
+                src={imagekitImageUrl("/Untitled_design__1_.png", { width: 1200 })}
                 alt="Developer portrait"
                 className="w-full max-w-[280px] md:max-w-md lg:max-w-lg object-contain drop-shadow-[0_0_20px_rgba(29,107,107,0.4)] hover:scale-105 transition-transform duration-700"
               />
@@ -334,7 +335,7 @@ export default function Home() {
               <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[#1d6b6b]/20 via-transparent to-[#5a7e7e]/20 blur-2xl" aria-hidden="true" />
               <div className="relative overflow-hidden rounded-[2.5rem] border border-[#5a7e7e]/40 bg-[#1f1f1f]/60 p-4 shadow-[0_25px_60px_rgba(0,0,0,0.35)]">
                 <img
-                  src="/faq-portrait.png"
+                  src={imagekitImageUrl("/faq-portrait.png", { width: 1200 })}
                   alt="Francis T. Saldua"
                   className="h-full w-full rounded-[2rem] object-cover"
                 />
