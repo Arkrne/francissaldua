@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arkrne Web Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <img src="MainLogo.jpg" alt="Arkrne Web Design logo" />
+      </div>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <div class="nav-item has-dropdown">
+          <a href="#about">About Us</a>
+          <div class="dropdown">
+            <a href="#about">About Us</a>
+            <a href="#faq">FAQ</a>
+            <a href="#testimonials">Testimonials / Social Proof</a>
+          </div>
+        </div>
+        <a href="#tech">Tech Stack / Skills</a>
+        <a href="#projects">Project Showcase</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-primary" href="#contact">Contact Section</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section reveal" id="home">
+        <div class="hero-text">
+          <p class="eyebrow">Premium custom systems</p>
+          <h1>Full-Stack Web Developer &amp; Designer.</h1>
+          <p class="lead">
+            Building custom, high-performance websites for local businesses - from database
+            architecture to sharp, trust-first front-end design.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View My Work</a>
+            <a class="btn btn-outline" href="#contact">Let's Talk</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="851e814e-c298-44db-b056-7797abf6e4bf.jpg"
+            alt="Developer working on a laptop"
+          />
+        </div>
+      </section>
+
+      <section class="section reveal" id="services">
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>End-to-end engineering for high-trust local brands.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="6" y="8" width="36" height="24" rx="2" />
+                <path d="M16 38h16" />
+                <path d="M20 32v6m8-6v6" />
+              </svg>
+            </div>
+            <h3>Front-End &amp; UI/UX</h3>
+          </article>
+          <article class="service-card">
+            <div class="icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="10" y="6" width="28" height="8" rx="2" />
+                <rect x="10" y="20" width="28" height="8" rx="2" />
+                <rect x="10" y="34" width="28" height="8" rx="2" />
+                <circle cx="16" cy="10" r="1.5" />
+                <circle cx="16" cy="24" r="1.5" />
+                <circle cx="16" cy="38" r="1.5" />
+              </svg>
+            </div>
+            <h3>Back-End &amp; Database</h3>
+          </article>
+          <article class="service-card">
+            <div class="icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path
+                  d="M24 14l3-6 5 3-2 6 5 4-4 5-6-2-4 5-5-4 2-6-5-4 4-5 7 4z"
+                />
+                <circle cx="24" cy="24" r="4" />
+              </svg>
+            </div>
+            <h3>Maintenance &amp; Support</h3>
+            <p>
+              Transparent, flexible per-change payment system - no bloated monthly
+              retainers.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="projects">
+        <div class="section-title center">
+          <h2>Website Mockups for Past Clients</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Orvia Builders</h3>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>M-S-2 Builder Supplies</h3>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>K&amp;A Sign Maker</h3>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Cebu PRP Travel &amp; Tours</h3>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="tech">
+        <div class="section-title">
+          <h2>Tech Stack</h2>
+          <p>Modern, secure tooling designed for speed and reliability.</p>
+        </div>
+        <div class="tech-row">
+          <span>Next.js</span>
+          <span>React</span>
+          <span>Tailwind CSS</span>
+          <span>PostgreSQL</span>
+          <span>AWS</span>
+        </div>
+      </section>
+
+      <section class="section reveal" id="about">
+        <div class="about-row">
+          <div class="about-image">
+            <img src="Untitled design (1).jpg" alt="Developer portrait" />
+          </div>
+          <div class="about-text">
+            <h2>About the Developer</h2>
+            <p>
+              I am a dedicated freelance developer partnering with local businesses to
+              digitize workflows, streamline operations, and launch premium, high-trust
+              websites that feel fully custom-coded from database to design.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-row" id="testimonials">
+          <div class="testimonial-box">
+            <h3>Client Testimonials</h3>
+            <p>
+              "Precise execution, secure delivery, and a premium finish that wins
+              contracts. Every change is scoped, priced, and shipped fast."
+            </p>
+            <p class="meta">Local construction client</p>
+          </div>
+          <div class="about-image">
+            <img
+              src="8993bb62-3b28-4986-bbe3-98b396f786c6.jpg"
+              alt="Developer holding awards"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="faq">
+        <div class="section-title">
+          <h2>FAQ</h2>
+          <p>Clear answers for per-change partnerships.</p>
+        </div>
+        <div class="faq-grid">
+          <div>
+            <h4>How does per-change maintenance work?</h4>
+            <p>
+              Each request is scoped with a fixed price before work begins, so you only
+              pay for changes you approve.
+            </p>
+          </div>
+          <div>
+            <h4>Do you handle hosting and databases?</h4>
+            <p>
+              Yes - planning, deployment, and ongoing monitoring are included for full
+              stack projects.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-logo">
+        <img src="LogoOnly.jpg" alt="Arkrne Web Design symbol" />
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com">GitHub</a>
+        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="#">+63 Phone Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
